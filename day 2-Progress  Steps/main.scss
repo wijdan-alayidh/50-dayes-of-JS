@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+// Variables 
+
+:root {
+
+    --background-color: #f6f7fb;
+
+    --text-color: #999;
+
+    --border-color-fill: #3498db;
+    --border-color-empty: #e0e0e0;
+}
+
+
+// general styles
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    font-size: 1.6rem;
+    color: var(--text-color);
+
+    @media (max-width: 56em) {
+        width: 100vw;
+    }
+
+    .progress-container {
+
+        display: flex;
+
+        height: 3rem;
+        width: 30.5rem;
+        max-width: 100%;
+
+        align-items: flex-end;
+        justify-content: space-between;
+
+        position: relative;
+
+        .progress {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: var(--border-color-empty);
+            top: 50%;
+            left: 0;
+            z-index: 0;
+
+            &::after {
+                content: '';
+                height: 3px;
+                width: 50%;
+                position: absolute;
+                background-color: var(--border-color-fill);
+            }
+        }
+
+        .circle {
+            width: 3.1rem;
+            text-align: center;
+            border: 3px solid var(--border-color-empty);
+            height: 3.1rem;
+            border-radius: 100rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: var(--background-color);
+
+            z-index: 1;
+
+            &.active {
+                border: 3px solid var(--border-color-fill);
+            }
+        }
+    }
+
+    .cta {
+        flex: 0 0 50%;
+
+        .btn {
+            .prev {}
+
+            .next {}
+        }
+
+    }
+}
