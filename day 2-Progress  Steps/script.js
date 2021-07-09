@@ -5,20 +5,19 @@ const prev = document.getElementById("prev");
 const progress = document.getElementById("progress");
 const circles = document.querySelectorAll(".circle");
 
-let currentActive = 1;
 const maxWidth = circles.length;
+
+let currentActive = 1;
 
 // click on next button
 next.addEventListener("click", () => {
-  currentActive >= maxWidth ? currentActive == maxWidth : currentActive++;
-
-  update();
+    currentActive >= maxWidth ? currentActive == maxWidth : currentActive++;
+    update();
 });
 
-// click on next button
+// click on prev button
 prev.addEventListener("click", () => {
   currentActive <= 1 ? currentActive == 1 : currentActive--;
-
   update();
 });
 

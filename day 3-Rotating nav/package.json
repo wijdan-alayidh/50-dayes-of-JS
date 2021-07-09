@@ -1,0 +1,17 @@
+{
+  "name": "day-3-rotatitin-nav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "dev-server": "live-server",
+    "start": "npm-run-parallel dev-server watch:sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "npm-run-parallel": "^0.6.0"
+  }
+}
